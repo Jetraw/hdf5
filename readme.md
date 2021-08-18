@@ -12,6 +12,7 @@ www.jetraw.com
 - Jetraw and Dpcore installed and running in your system. Also included in the system PATH.
 - Python 3.7+ and h5py 3.2.0+
 - HDF5 1.8.11+
+- For writing compressed files a valid License is needed.
 
 ## Install Windows
 
@@ -37,7 +38,7 @@ You can simply **add those two instructions in your bashrc (/home/user/.bashrc)*
 
 ## Usage
 
-We will follow the example provided in this git repository to read an HDF5 file, prepare it with dpcore and compress it with Jetraw. 
+We will follow the example provided in this git repository to read an HDF5 file, prepare it with dpcore (need to install [pyDpcore](https://github.com/Jetraw/pyDpcore)) and compress it with Jetraw. 
 
 ```python
 import os
