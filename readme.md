@@ -15,10 +15,12 @@ www.jetraw.com
 
 ## Install Windows
 
-Copy the HDF5 Jetraw filter (h5jetrawfilter.dll) into your HDF5 install plugin path (e.g. path_to_HDF_installation\HDF5\1.8.18\lib\plugin\)
+Download the HDF5 filter library (.dll) from [latest (pre-)release](https://github.com/Jetraw/hdf5/releases/download/21.08.18.6/h5jetrawfilter.dll).
+Copy the HDF5 Jetraw filter (h5jetrawfilter.dll) into your HDF5 install plugin path (e.g. path_to_HDF_installation/HDF5/1.8.18/lib/plugin/)
 
 ## Install Linux
 
+Download the HDF5 filter library (.so) from [latest (pre-)release](https://github.com/Jetraw/hdf5/releases/download/21.08.18.6/libh5jetrawfilter.so).
 Copy the HDF5 Jetraw filter (libh5jetrawfilter.so) into your desired folder and export the environment variable HDF5_PLUGIN_PATH to the chosen folder:
 
 ```
