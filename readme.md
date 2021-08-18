@@ -38,7 +38,13 @@ You can simply **add those two instructions in your bashrc (/home/user/.bashrc)*
 
 ## Usage
 
-We will follow the example provided in this git repository to read an HDF5 file, prepare it with dpcore (need to install [pyDpcore](https://github.com/Jetraw/pyDpcore)) and compress it with Jetraw. 
+We will follow the example provided in this git repository to read an HDF5 file, prepare it with dpcore (need to install [pyDpcore](https://github.com/Jetraw/pyDpcore)) and compress it with Jetraw. Remember to add a correct calibration identifier to dpcore prepare the image correctly. If you are not user which identifier are available run the following command to list them:
+
+```
+dpcore --list-ids
+```
+
+If you need more information regarding dpcore and jetraw please visit [jetraw-github](https://github.com/Jetraw/jetraw)
 
 ```python
 import os
