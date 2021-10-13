@@ -39,7 +39,7 @@ You can simply **add those two instructions in your bashrc (/home/user/.bashrc)*
 ## Install macOS
 
 Download the HDF5 filter library (.dylib) from [latest (pre-)release](https://github.com/Jetraw/hdf5/releases/download/21.08.18.6/libh5jetrawfilter.dylib).
-Copy the HDF5 Jetraw filter (libh5jetrawfilter.dylib) into your desired folder (recommended to use the same as the installation. path_to_HDF_installation/HDF5/1.x.y/lib/plugin/) and export the environment variable HDF5_PLUGIN_PATH to the chosen folder:
+Copy the HDF5 Jetraw filter (libh5jetrawfilter.dylib) into your desired folder (recommended to use the same as the installation path_to_HDF_installation/HDF5/1.x.y/lib/plugin/) and export the environment variable HDF5_PLUGIN_PATH to the chosen folder:
 
 ```
 export HDF5_PLUGIN_PATH=/desired_folder_for_hdf5_filters/
