@@ -36,6 +36,24 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path_to_jetraw_folder/lib/
 
 You can simply **add those two instructions in your bashrc (/home/user/.bashrc)** file, then everytime a bash environment is created everything is set up to use the HDF5 filter. 
 
+## Install macOS
+
+Download the HDF5 filter library (.dylib) from [latest (pre-)release](https://github.com/Jetraw/hdf5/releases/download/21.08.18.6/libh5jetrawfilter.dylib).
+Copy the HDF5 Jetraw filter (libh5jetrawfilter.dylib) into your desired folder and export the environment variable HDF5_PLUGIN_PATH to the chosen folder:
+
+```
+export HDF5_PLUGIN_PATH=/desired_folder_for_hdf5_filters/
+```
+
+If you have installed the Jetraw UI.app application into the Applications folder there is nothing else to do. In the case you chose to have a custom location for your Jetraw UI.app, you need to configure the DYLD_FALLBACK_LIBRARY_PATH variable to point to your dpcore and jetraw libraries location. If not the HDF5 filter will not be able to find them.
+
+```
+export DYLD_FALLBACK_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/path_to_jetraw_folder/lib/
+```
+
+You can simply **add those two instructions in your bashrc or zshrc (/home/user/.bashrc or /home/user/.zshrc)** file, then everytime a bash environment is created everything is set up to use the HDF5 filter. 
+
+
 ## Usage
 
 We will follow the example provided in this git repository to read an HDF5 file, prepare it with dpcore (need to install [pyDpcore](https://github.com/Jetraw/pyDpcore)) and compress it with Jetraw. Remember to add a correct calibration identifier to dpcore prepare the image correctly. If you are not user which identifier are available run the following command to list them:
