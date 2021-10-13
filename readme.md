@@ -8,8 +8,8 @@ www.jetraw.com
 
 ## Requirements
 
-- Windows 10 64 bits or Linux
-- Jetraw and Dpcore installed and running in your system. Also included in the system PATH.
+- Windows 10 64 bits, Linux or macOS
+- Jetraw and Dpcore installed and running in your system. Included in the system PATH (Windows).
 - Python 3.7+ and h5py 3.2.0+
 - HDF5 1.8.11+
 - For writing compressed files a valid License is needed.
@@ -17,12 +17,12 @@ www.jetraw.com
 ## Install Windows
 
 Download the HDF5 filter library (.dll) from [latest (pre-)release](https://github.com/Jetraw/hdf5/releases/download/21.08.18.6/h5jetrawfilter.dll).
-Copy the HDF5 Jetraw filter (h5jetrawfilter.dll) into your HDF5 install plugin path (e.g. path_to_HDF_installation/HDF5/1.8.18/lib/plugin/)
+Copy the HDF5 Jetraw filter (h5jetrawfilter.dll) into your HDF5 install plugin path (e.g. path_to_HDF_installation/HDF5/1.x.y/lib/plugin/)
 
 ## Install Linux
 
 Download the HDF5 filter library (.so) from [latest (pre-)release](https://github.com/Jetraw/hdf5/releases/download/21.08.18.6/libh5jetrawfilter.so).
-Copy the HDF5 Jetraw filter (libh5jetrawfilter.so) into your desired folder and export the environment variable HDF5_PLUGIN_PATH to the chosen folder:
+Copy the HDF5 Jetraw filter (libh5jetrawfilter.so) into your desired folder (recommended to use the same as the installation. path_to_HDF_installation/HDF5/1.x.y/lib/plugin/) and export the environment variable HDF5_PLUGIN_PATH to the chosen folder:
 
 ```
 export HDF5_PLUGIN_PATH=/desired_folder_for_hdf5_filters/
@@ -39,7 +39,7 @@ You can simply **add those two instructions in your bashrc (/home/user/.bashrc)*
 ## Install macOS
 
 Download the HDF5 filter library (.dylib) from [latest (pre-)release](https://github.com/Jetraw/hdf5/releases/download/21.08.18.6/libh5jetrawfilter.dylib).
-Copy the HDF5 Jetraw filter (libh5jetrawfilter.dylib) into your desired folder and export the environment variable HDF5_PLUGIN_PATH to the chosen folder:
+Copy the HDF5 Jetraw filter (libh5jetrawfilter.dylib) into your desired folder (recommended to use the same as the installation. path_to_HDF_installation/HDF5/1.x.y/lib/plugin/) and export the environment variable HDF5_PLUGIN_PATH to the chosen folder:
 
 ```
 export HDF5_PLUGIN_PATH=/desired_folder_for_hdf5_filters/
