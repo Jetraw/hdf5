@@ -40,41 +40,46 @@ You can simply **add those two instructions in your bashrc (/home/user/.bashrc)*
 ## Install macOS
 If you do not have HDF5 installed in your computer you can easily download it using Hombrebrew. Remember that the provided .dylib is only compiled for the x86_64 architecture at the moment. 
 
-Hombrew download and installation:
+1. Open a Terminal.
+2. Hombrew download and installation:
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-HDF5 download and installation for architecture x86_64. If your homebrew binary is another location please use the correct one:
+3. HDF5 download and installation for architecture x86_64. If your homebrew binary is another location please use the correct one:
 ```
 arch --x86_64 /usr/local/Homebrew/bin/brew install hdf5
 ```
 
-Download the HDF5 filter library (.dylib) from [latest (pre-)release](https://github.com/Jetraw/hdf5/releases/download/21.08.18.6/libh5jetrawfilter.dylib).
+4. Download the HDF5 filter library (.dylib) from [latest (pre-)release](https://github.com/Jetraw/hdf5/releases/download/21.08.18.6/libh5jetrawfilter.dylib).
 
-Copy the HDF5 Jetraw filter (libh5jetrawfilter.dylib) into your desired folder (recommended to use the same as the HDF5 installation "path_to_HDF_installation/HDF5/1.x.y/lib/plugin/") and export the environment variable HDF5_PLUGIN_PATH to the chosen folder:
-
+5. Copy the HDF5 Jetraw filter (libh5jetrawfilter.dylib) into your preferred folder (recommended to use the same as the HDF5 installation "path_to_HDF_installation/HDF5/1.x.y/lib/plugin/") and export the environment variable HDF5_PLUGIN_PATH to the chosen folder:
 ```
 export HDF5_PLUGIN_PATH=/desired_folder_for_hdf5_filters/
 ```
 
-If you have installed the Jetraw UI.app application into the Applications folder there is nothing else to do. In the case you chose to have a custom location for your Jetraw UI.app, you need to configure the DYLD_FALLBACK_LIBRARY_PATH variable to point to your dpcore and jetraw libraries location. If not the HDF5 filter will not be able to find them.
+If you have installed the Jetraw UI.app application into the Applications folder there is nothing else to do. 
 
+**OPTIONAL:**
+In case you chose to have a custom location for your Jetraw UI.app, you need to configure the DYLD_FALLBACK_LIBRARY_PATH variable to point to your dpcore and jetraw libraries location. If not the HDF5 filter will not be able to find them.
 ```
-export DYLD_FALLBACK_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/path_to_jetraw_folder/lib/
+export DYLD_FALLBACK_LIBRARY_PATH=$DYLD_FALLBACK_LIBRARY_PATH:/path_to_jetraw_folder/lib/
 ```
 
-It is recommended to **add those two instructions in your bashrc or zshrc (/home/user/.bashrc or /home/user/.zshrc)** file, then everytime a bash environment is created everything is set up to use the HDF5 filter correctly. 
+It is recommended to **add the two export instructions in your bashrc or zshrc (/home/user/.bashrc or /home/user/.zshrc)** file, then everytime a bash environment is created everything is set up to use the HDF5 filter correctly. 
 
+**NOTE:**
 Remember that **you need to launch your Fiji application from the Terminal** if not your environment will not be correclty set. 
 
-To launch your Fiji application, go to the path where is located and run the following command:
+6. To test if the installation worked please launch your Fiji application, go to the path where the .app is located and run the following command:
 ```
 open -n Fiji.app
 ```
 
-## Usage
+7. Use the Plugins->HDF5->Load HDF5 File...
+   Choose a .p.h5 file. 
 
+## Usage
 We will follow the example provided in this git repository to read an HDF5 file, prepare it with dpcore (need to install [pyDpcore](https://github.com/Jetraw/pyDpcore)) and compress it with Jetraw. Remember to add a correct calibration identifier to dpcore prepare the image correctly. If you are not user which identifier are available run the following command to list them:
 
 ```
